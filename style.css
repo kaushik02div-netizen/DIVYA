@@ -1,0 +1,169 @@
+:root{
+  --primary:#0f766e;
+  --secondary:#14b8a6;
+  --bg: linear-gradient(135deg,#e6fffb,#ccfbf1);
+  --card:#ffffff;
+  --text:#1f2937;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAVBAR */
+nav{
+  background:var(--primary);
+  padding:15px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav h3{
+  color:white;
+  margin-bottom:8px;
+}
+
+nav a{
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#d1fae5;
+}
+
+/* SECTION */
+section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+  animation:fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* HOME */
+#home{
+  text-align:center;
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+  url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') no-repeat center/cover;
+  color:white;
+  border-radius:0 0 30px 30px;
+}
+
+#home h1{
+  font-size:2.5rem;
+}
+
+#home img{
+  margin-top:20px;
+  height:200px;
+  width:300px;
+  border-radius:20px;
+  border:4px solid white;
+  transition:0.3s;
+}
+
+#home img:hover{
+  transform:scale(1.05);
+}
+
+/* ABOUT */
+#about{
+  text-align:center;
+}
+
+#about p{
+  margin-top:15px;
+  line-height:1.6;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:20px;
+}
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* BUTTON */
+button{
+  padding:10px 15px;
+  background:var(--primary);
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#0d5c57;
+  transform:scale(1.05);
+}
+
+/* CONTACT */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:20px;
+}
+
+form input,form textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+form input:focus,form textarea:focus{
+  outline:none;
+  border:1px solid var(--primary);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:var(--primary);
+  color:white;
+  margin-top:30px;
+}
